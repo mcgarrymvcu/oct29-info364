@@ -114,7 +114,7 @@ left, right = st.columns([2, 1])
 
 # ----- LEFT column: slides, narration, audio, nav -----
 with left:
-    st.title("INFO 300 — TCP/IP Model (5-layer)")
+    st.title("INFO 364 - Data Warehouse Design ")
 
     if not slide_imgs:
         st.warning("No slides found. Please place PNG/JPGs in the 'slides/' folder.")
@@ -170,14 +170,14 @@ with right:
         st.image(avatar, caption="Professor McGarry", width=160)
 
     st.header("Q&A (in-class)")
-    st.caption("Ask about today’s TCP/IP lecture (5-layer model). Keep questions on topic.")
+    st.caption("Ask about today’s lecture on data warehouse design). Keep questions on topic.")
 
     for m in st.session_state.messages:
         if m["role"] in ("user", "assistant"):
             with st.chat_message("user" if m["role"] == "user" else "assistant"):
                 st.write(m["content"])
 
-    prompt = st.chat_input("Ask a question about the TCP/IP model…", disabled=(client is None))
+    prompt = st.chat_input("Ask a question about data warehouse design", disabled=(client is None))
     if prompt and not client:
         st.info("OpenAI key missing — add it under Settings → Secrets to enable chat.")
     elif prompt and client:
@@ -189,7 +189,7 @@ with right:
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": (
-                        "You are a helpful TA for INFO 300. "
+                        "You are a helpful TA for INFO 364. "
                         "Answer concisely and stay on-topic about the TCP/IP model (5-layer)."
                     )},
                     *st.session_state.messages,
