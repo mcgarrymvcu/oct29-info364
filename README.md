@@ -1,4 +1,4 @@
-# INFO 300 — TCP/IP Lecture (Option C)
+# INFO 364 — Data warehousing
 
 This Streamlit app delivers your slide deck with narration text and an OpenAI-powered Q&A chat. 
 Recommended deployment: **Streamlit Community Cloud** (students only need a link).
