@@ -10,7 +10,7 @@ from openai import OpenAI
 # Page setup
 # ===============================
 st.set_page_config(
-    page_title="INFO 300 — TCP/IP Lecture",
+    page_title="INFO 364 - ",
     layout="wide",
     initial_sidebar_state="expanded",
 )
